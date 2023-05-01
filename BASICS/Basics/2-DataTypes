@@ -1,0 +1,121 @@
+Java is statically typed and also a strongly typed language because in Java, each type of data is predefined as part of the programming language.
+
+Java DataTypes----------------------
+Java has two categories in which data types are segregated :-----
+    Primitive Data Type: such as boolean, char, int, short, byte, long, float, and double
+    Non-Primitive Data Type or Object Data type: such as String, Array, etc.
+
+Primitive Data Type
+boolean	  true or false	                1 bit        true or false
+byte 	  twos-complement integer		8 bits      -128 to 127
+char 	  Unicode character	            16 bits 	 0 to 255
+short	  twos-complement integer		16 bits	    -32,768 to 32,767
+int	      twos-complement intger		32 bits	 	-2,147,483,648 to 2,147,483,647
+long	  twos-complement integer		64 bits	    -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float 	  IEEE 754 floating point		32 bits	    upto 7 decimal digits
+double	  IEEE 754 floating point		64 bits	    upto 16 decimal digits
+
+Non-Primitive Data Type or Reference Data Types
+Reference Data Types will contain a memory address of variable values because the reference types wont store the variable value directly in memory.
+They are strings, objects, arrays, etc.
+
+Java Identifiers----------------------
+identifiers are used for identification purposes.
+
+Rules for valid Java Identifiers.
+(i)The only allowed characters for identifiers are all alphanumeric characters([A-Z],[a-z],[0-9]), ‘$‘(dollar sign) and ‘_‘ (underscore).
+(ii)Identifiers should not start with digits([0-9]). For example “123geeks” is a not a valid java identifier.
+(iii)Java identifiers are case-sensitive.
+(iv)There is no limit on the length of the identifier but it is advisable to use an optimum length of 4 – 15 letters only.
+(v)Reserved Words can’t be used as an identifier. For example “int while = 20;” is an invalid statement as while is a reserved word. 
+There are 53 reserved words in Java 
+ 
+
+Any programming language reserves some words to represent functionalities defined by that language. 
+These words are called reserved words.They can be briefly categorized into two parts : keywords(50) and literals(3). 
+Keywords define functionalities and literals define a value. 
+Identifiers are used by symbol tables in various analyzing phases(like lexical, syntax, semantic) of a compiler architecture. 
+
+-------------------------------$$$$$$------------------------------$$$$$$$$---------------------------------------------------------
+
+Operators in Java:---
+(i)Arithmetic Operators       *,/,+,-,%
+(ii)Unary Operators
+(iii)Assignment Operator       +=, -=, *=, /=, %=
+(iv)Relational Operators       ==, !=, <, <=, >, >=
+(v)Logical Operators           &&, ||, !
+(vi)Ternary Operator           condition ? if true : if false
+(vii)Bitwise Operators          &, |, ^, ~
+(viii)Shift Operators           number shift_op number_of_places_to_shift;
+(ix)instance of operator        object instance of class/subclass/interface
+
+
+UNARY:-
+++ : Increment operator, used for incrementing the value by 1. There are two varieties of increment operators. 
+        Post-Increment: Value is first used for computing the result and then incremented.
+        Pre-Increment: Value is incremented first, and then the result is computed.
+-- : Decrement operator, used for decrementing the value by 1. There are two varieties of decrement operators. 
+        Post-decrement: Value is first used for computing the result and then decremented.
+        Pre-Decrement: Value is decremented first, and then the result is computed.
+
+SHIFT:-
+<<, Left shift operator: shifts the bits of the number to the left and fills 0 on voids left as a result. 
+    Similar effect as multiplying the number with some power of two.
+>>, Signed Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. 
+    The leftmost bit depends on the sign of the initial number. Similar effect as dividing the number with some power of two.
+>>>, Unsigned Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. 
+    The leftmost bit is set to 0.
+
+-------------------------------$$$$$$------------------------------$$$$$$$$---------------------------------------------------------
+
+Precedence and Associativity of Operators
+
+Right to Left:- ++, --, +, -, !, ?:, =, +=, -=, *=, %=, /=
+Rest all Left to Right.
+
+-------------------------------$$$$$$------------------------------$$$$$$$$---------------------------------------------------------
+
+Variables in Java
+
+Different types of variables  which are listed as follows: 
+(i)Local Variables :- A variable defined within a block or method or constructor is called a local variable. 
+        These variables are created when the block is entered, or the function is called and destroyed after exiting from the block or when the call returns from the function.
+        The scope of these variables exists only within the block in which the variables are declared, i.e., we can access these variables only within that block.
+        Initialization of the local variable is mandatory before using it in the defined scope.
+(ii)Instance Variables:- Instance variables are non-static variables and are declared in a class outside of any method, constructor, or block. 
+        As instance variables are declared in a class, these variables are created when an object of the class is created and destroyed when the object is destroyed.
+        Unlike local variables, we may use access specifiers for instance variables. If we do not specify any access specifier, then the default access specifier will be used.
+        Instance variables can be accessed only by creating objects.
+        We initialize instance variables using constructors while creating an object. We can also use instance blocks to initialize the instance variables.
+(iii)Static Variables:- 
+        These variables are declared similarly to instance variables. The difference is that static variables are declared using the static keyword within a class outside of any method, constructor, or block.
+        Unlike instance variables, we can only have one copy of a static variable per class, irrespective of how many objects we create.
+        Static variables are created at the start of program execution and destroyed automatically when execution ends.
+        Static variables cannot be declared locally inside an instance method.
+        Static blocks can be used to initialize static variables.
+
+-------------------------------$$$$$$------------------------------$$$$$$$$---------------------------------------------------------
+
+Wrapper Classes in Java
+
+A Wrapper class in Java is a class whose object wraps or contains primitive data types. 
+When we create an object to a wrapper class, it contains a field and in this field, we can store primitive data types.
+
+Need of Wrapper Classes
+There are certain needs for using the Wrapper class in Java as mentioned below:--- 
+    They convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into a method (because primitive types are passed by value).
+    The classes in java.util package handles only objects and hence wrapper classes help in this case also.
+    Data structures in the Collection framework, such as ArrayList and Vector, store only objects (reference types) and not primitive types.
+    An object is needed to support synchronization in multithreading.
+
+Autoboxing:----
+The automatic conversion of primitive types to the object of their corresponding wrapper classes is known as autoboxing. 
+For example -- conversion of int to Integer, long to Long, double to Double, etc. 
+
+Unboxing:---
+It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing. 
+For example-- conversion of Integer to int, Long to long, Double to double, etc. 
+
+Custom Wrapper Classes in Java:---
+Java Wrapper classes wrap the primitive data types. We can create a class that wraps data inside it. So let us check how to create our own custom wrapper class in Java. 
+It can be implemented for creating certain structures like queues, stacks, etc.

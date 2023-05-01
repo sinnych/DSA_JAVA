@@ -1,0 +1,36 @@
+class GFG
+{
+// Function to find the factors of the numbers from 1 to N
+static void factors(int n)
+{
+    int i, j;
+    System.out.print("1 -->1\n");  
+    // Loop to find the factors of the first N natural numbers of the integer
+    for (i = 2; i <= n; i++)
+    {
+        System.out.print(i + " -->");
+        for (j = 1; j * j <= i; j++)
+        {
+            if (i % j == 0)
+            {
+                System.out.print(j + ", ");
+                if (i / j != j)
+                    System.out.print(i / j + ", ");
+            }
+        }
+        System.out.print("\n");
+    }
+}
+public static void main(String args[])
+{
+    int n = 5;
+    factors(n);
+}
+}
+----------------------------
+Output: 
+1 -->1
+2 -->1, 2, 
+3 -->1, 3, 
+4 -->1, 4, 2, 
+5 -->1, 5, 

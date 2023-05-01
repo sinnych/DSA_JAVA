@@ -1,0 +1,64 @@
+Java’s Selection statements:--- 
+    if
+    if-else
+    nested-if
+    if-else-if
+    switch-case
+    jump --Java supports three jump statements: break, continue and return
+        --  break:- Terminate a sequence in a switch statement. To exit a loop. Used as a “civilized” form of goto., 
+            continue:-you might want to continue running the loop but stop processing the remainder of the code in its body for this particular iteration, 
+            return:- explicitly return from a method. That is, it causes program control to transfer back to the caller of the method.
+
+SWITCH:--
+switch (expression)
+{
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+  .
+  .
+  case valueN:
+    statementN;
+    break;
+  default:
+    statementDefault;
+}
+
+$$---------------$$-------------------$$--------------------------$$-------------------$$-----------------------$$
+
+Loops in Java
+
+for loop: for loop provides a concise way of writing the loop structure. 
+          Unlike a while loop, a for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping. 
+Syntax:
+
+for (initialization condition; testing condition;increment/decrement)
+{
+    statement(s)
+}
+----------------------------------------------------------------
+while loop: A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. 
+            The while loop can be thought of as a repeating if statement. 
+
+While loop starts with the checking of Boolean condition. If it evaluated to true, then the loop body statements are executed otherwise first statement following the loop is executed. 
+For this reason it is also called Entry control loop.
+Syntax :
+while (boolean condition)
+{
+   loop statements...
+}
+----------------------------------------------------------------
+do while:  Do while loop is similar to while loop with only difference that it checks for 
+           condition after executing the statements, and therefore is an example of Exit Control Loop. 
+           (i)do while loop starts with the execution of the statement(s). There is no checking of any condition for the first time.
+           (ii)do-while loop will execute its statements atleast once before any condition is checked, and therefore is an example of exit control loop.
+Syntax:
+
+do
+{
+    statements..
+}
+while (condition);

@@ -1,0 +1,159 @@
+INPUT
+1--->Earlier we used BufferedReader Class to read sequence of characters.
+     InputStreamReader() converts the input stream of bytes into a stream of characters.
+     BufferedReader can throw checked Exceptions.
+EXAMPLE---Take input from the user by using buffer reader class.
+
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class Easy {
+    public static void main(String[] args)
+    {
+        // creating the instance of class BufferedReader
+        BufferedReader reader = new BufferedReader(
+            new InputStreamReader(System.in));
+        String name;
+        try {
+            System.out.println("Enter your name");
+            name = reader.readLine(); // taking string input
+            System.out.println("Name=" + name);
+        }
+        catch (Exception e) {
+        }
+    }
+}
+##--------------##----------------##----------------##
+2--->SCANNER 
+Advanced version of BufferedReader.
+The scanner is much easier to read as we dont have to write throws as there is no exception thrown by it.
+Uses scanner class which is a pre-defined class in java.util package.
+Rules:- 
+1---> create object of scanner class 
+         Scanner object_name = new scanner(System.in);
+2---> Scanner class methods:-
+        nextLine();
+        nextInt();
+        nextFloat();
+        nextBoolean();
+        nextDouble();  
+EXAMPLE:-
+import java.io.*;
+import java.util.Scanner;
+class Easy {
+    public static void main(String[] args)
+    {
+        // creating the instance of class Scanner
+        Scanner obj = new Scanner(System.in);
+        String name;
+        int rollno;
+        float marks;
+        System.out.println("Enter your name");
+        name = obj.nextLine(); // taking string input
+        System.out.println("Enter your rollno");
+        rollno = obj.nextInt(); // taking integer input
+        System.out.println("Enter your marks");
+        marks = obj.nextFloat(); // taking float input
+        // printing the output
+        System.out.println("Name=" + name);
+        System.out.println("Rollno=" + rollno);
+        System.out.println("Marks=" + marks);
+    }
+}    
+
+Output:
+Enter your name
+Geeks 
+Enter your rollno
+5
+Enter your marks
+84.60
+Name=Geeks 
+Rollno=5
+Marks=84.60
+
+##-------------##-----------------##---------------------##
+
+Scanner class is a simple text scanner that can parse primitive types and strings. 
+It internally uses regular expressions to read different types while on the other hand
+import java.util.Scanner;
+ 
+class GFG {
+ 
+    // Main driver method
+    public static void main(String args[])
+    {
+        // Creating object of Scanner class to read input from keyboard
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter an integer & a String");
+ 
+        // Using nextInt() to parse integer values
+        int a = scn.nextInt();
+ 
+        // Using nextLine() to parse string values
+        String b = scn.nextLine();
+ 
+        // Display name and age entered above
+        System.out.printf("You have entered:- " + a + " "
+                          + "and name as " + b);
+    }
+} 
+-----------------------------------------------------------------------------------------------------------------------
+BufferedReader class reads text from a character-input stream, buffering characters so as to provide for the efficient reading of the sequence of characters.
+
+import java.io.*;
+class GFG {
+    // Main driver method
+    public static void main(String args[]) throws IOException
+    {
+        // Creating object of class inside main() method
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter an integer");
+ 
+        // Taking integer input
+        int a = Integer.parseInt(br.readLine());
+ 
+        System.out.println("Enter a String");
+ 
+        String b = br.readLine();
+ 
+        // Printing input entities above
+        System.out.printf("You have entered:- " + a + " and name as " + b);
+    }
+}
+
+##-------------##-----------------##---------------------####-------------##-----------------##---------------------##
+// Java program to demonstrate working of Scanner in Java
+import java.util.Scanner;
+ 
+class GetInputFromUser {
+    public static void main(String args[])
+    {
+        // Using Scanner for Getting Input from User
+        Scanner in = new Scanner(System.in);
+
+        String s = in.nextLine();
+        System.out.println("You entered string " + s);
+        int a = in.nextInt();
+        System.out.println("You entered integer " + a); 
+        float b = in.nextFloat();
+        System.out.println("You entered float " + b);
+    }
+}
+##-------------##-----------------##---------------------##
+System.out.println in Java
+
+System: It is a final class defined in the java.lang package.
+out: This is an instance of PrintStream type, which is a public and static member field of the System class.
+println(): As all instances of PrintStream class have a public method println(), hence we can invoke the same on out as well. 
+           This is an upgraded version of print(). It prints any argument passed to it and adds a new line to the output. 
+           We can assume that System.out represents the Standard Output Stream.
+
+ Difference between System.out.print() and System.out.println()   
+
+    System.out.print(): This method prints the text on the console and the cursor remains at the end of the text at the console. 
+           The next printing takes place from just here. This method must take atleast one parameter else it will throw an error.
+
+    System.out.println(): This method prints the text on the console and the cursor remains at the start of the next line at the console. 
+           The next printing takes place from the next line. This method may or may not take any parameter.
+

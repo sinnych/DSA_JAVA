@@ -1,0 +1,41 @@
+class GFG {   
+    static int reverse(int n){
+      int rev = 0; // reversed number
+      int rem;   // remainder
+      while(n>0){        
+        rem = n%10;
+        rev = (rev*10) + rem;
+        n = n/10;
+      }       
+      return rev;
+    }    
+   // Driver Function
+    public static void main (String[] args) {
+        int n = 4526;        
+        System.out.print("Reversed Number is "+ reverse(n));
+    }
+}
+Output:----
+Reversed Number is 6254
+Time complexity: O(log n) for given number n
+-------------------------------------------------------------------------------------
+
+2. Using Recursion: 
+class GFG 
+{
+    static int rev = 0;             // stores reversed number
+    static void reverse(int n)              // Function to reverse the number
+    {     
+      if(n<=0)
+        return ;     
+      int rem = n%10;  // remainder       
+      rev = (rev*10) + rem;      
+      reverse(n/10);
+    }   
+   // Driver Function
+    public static void main (String[] args) {      
+        int n = 4526;     
+        reverse(n);     
+        System.out.print("Reversed Number is "+ rev);
+    }
+}
